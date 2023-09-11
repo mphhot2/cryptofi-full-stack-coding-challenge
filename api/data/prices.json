@@ -1,0 +1,9 @@
+{
+    "prices": [
+        {"coin": "BTC", "price": "30000", "name": "Bitcoin"},
+        {"coin": "ETH", "price": "2000", "name": "Ethereum"},
+        {"coin": "BCH", "price": "200", "name": "Bitcoin Cash"},
+        {"coin": "XLM", "price": "0.10", "name": "Stellar"},
+        {"coin": "LTC", "price": "70", "name": "Litecoin"}
+    ]
+}

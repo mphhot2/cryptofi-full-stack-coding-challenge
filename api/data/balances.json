@@ -1,0 +1,6 @@
+{
+    "user_balances": [
+        {"user_id": "1", "balances": {"BTC": "0.1", "ETH": "0.0", "BCH": "0.0", "LTC": "0.0", "XLM": "100.0"}},
+        {"user_id": "2", "balances": {"BTC": "0.0", "ETH": "2.0", "BCH": "1.0", "LTC": "100.0", "XLM": "0.0"}}
+    ]
+}

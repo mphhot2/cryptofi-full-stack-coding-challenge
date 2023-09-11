@@ -1,0 +1,54 @@
+version: '3.8'
+name: cryptofi-fullstack-coding-challenge
+services:
+  cryptofi-fullstack-coding-challenge:
+    container_name: cryptofi-fullstack-coding-challenge
+    build:
+      context: ../..
+      dockerfile: docker/config/Dockerfile
+    ports:
+      - "8000:80"
+    volumes:
+      - ../../api/src:/app/src
+      - ../../docker:/app/docker
+      - ../../api/test:/app/test
+    depends_on: 
+      - db
+    env_file:
+      - ../env/.env
+
+  db:
+    image: amazon/dynamodb-local
+    container_name: db
+    command: "-jar DynamoDBLocal.jar -port 8003 -sharedDb -optimizeDbBeforeStartup -dbPath /home/dynamodblocal/data/"
+    ports:
+      - 8003:8003
+    user: root
+    volumes:
+      - dynamodb_data:/home/dynamodblocal/data
+
+  db-admin:
+    container_name: db-admin
+    build:
+      context: .
+      dockerfile: db-admin.Dockerfile
+    ports:
+      - 8001:8001
+    environment:
+      - DYNAMO_ENDPOINT=http://db:8003
+    depends_on:
+      - db
+
+  frontend:
+    container_name: frontend
+    build:
+      context: ../..
+      dockerfile: docker/config/frontend.Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ../../frontend:/app/frontend
+      - ../../docker:/app/docker
+
+volumes:
+  dynamodb_data: null
