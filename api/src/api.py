@@ -25,4 +25,3 @@ def get_prices_and_balances():
     """
 
     return {}
-
