@@ -11,8 +11,7 @@ services:
     volumes:
       - ../../api/src:/app/src
       - ../../docker:/app/docker
-      - ../../api/test:/app/test
-    depends_on: 
+    depends_on:
       - db
     env_file:
       - ../env/.env

@@ -11,7 +11,6 @@ WORKDIR /app
 COPY /api/requirements.txt .
 COPY /api/src ./src
 COPY /docker ./docker
-COPY /api/test ./test
 COPY /api/data ./data
 
 
@@ -19,6 +18,6 @@ COPY /api/data ./data
 RUN python -m pip install -r requirements.txt
 
 
-ENV PYTHONPATH "${PYTHONPATH}:/src:/test"
+ENV PYTHONPATH "${PYTHONPATH}:/src"
 
 CMD ["sh", "./docker/scripts/entrypoint.sh"]
