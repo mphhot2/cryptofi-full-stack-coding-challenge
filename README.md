@@ -4,22 +4,31 @@ Welcome to the CryptoFi Full-Stack Engineering coding challenge! This challenge 
 
 ## Challenge Description
 
+### API Overview
 In this challenge, you will be asked to create a simple api endpoint that will allow a user to get a list of crypto prices, along with the user's balances. This part of the coding challenge will require you to get familiar with libraries such as FastApi, Pydantic, and Dyntastic. 
 The prices should be ordered by the most amount of holdings a user has, for all the coins that the user holds, then alpabetically.
+The prices and balances will be pre-populated in the database. You will not need to create any routes for creating or updating the prices and balances.
 
+A FastApi app has already been created for you in the `/api` directory.
+
+### Requirements
+- A GET route that returns ordered prices and balances for a specific user. 
+  - The balances should be ordered by the most amount of holdings a user has, for all the coins that the user holds, then alphabetically.
+    - For Example - If User `1` has 10 BTC, 5 ETH, 5 LTC, 0 XLM, and 0 BCH, the balances should be returned in the order of BTC, ETH, LTC, BCH, XLM
+  - The route should accept a user id as a parameter. 
+    - For example - I pass in User `1`, I will receive the user's balances for User `1`
+
+### Frontend Overview
 For the frontend part of the coding challenge, you will be asked to display the cryptocurrencies in order. This part of the coding challenge will require you to get familiar with React and typescript.
 We should also be able to switch between the 2 users available. This can be done with a dropdown or a button. We expect to see the use of [context](https://react.dev/reference/react/useContext) for this part of the challenge.
 
-### Requirements
+A React app has already been created for you in the `/frontend` directory. You can also find the logos for the cryptocurrencies in the `/frontend/src/assets` directory.
 
-- A GET route that returns ordered prices and balances 
-  - For example - I pass in User `1`, I will receive the user's balances for User `1`
+### Requirements
 - List out all prices and balances on the frontend
-  - Coins should be ordered by the most amount of holdings a user has, for all the coins that the user holds, then alpabetically.
 - List out the 2 users available and be able to switch back and forth between them
   - This can be done with a dropdown or a button
   - The balances shown should update when switching between users
-
 
 ## Getting Started
 
