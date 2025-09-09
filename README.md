@@ -1,6 +1,6 @@
 # Coding Challenge Readme
 
-Welcome to the CryptoFi Full-Stack Engineering coding challenge! This challenge is designed to assess your coding skills, problem-solving abilities, and "grit". Before you begin, please take a moment to read through this readme to understand the challenge requirements, instructions, and guidelines.
+Welcome to the InvestiFi Full-Stack Engineering coding challenge! This challenge is designed to assess your coding skills, problem-solving abilities, and "grit". Before you begin, please take a moment to read through this readme to understand the challenge requirements, instructions, and guidelines.
 
 ## Challenge Description
 
@@ -88,8 +88,6 @@ Your solution will be evaluated based on the following criteria:
 
 ## Contact
 
-If you have any questions or need clarification about the challenge, feel free to reach out to us at [ramsey@cryptofi.tech](mailto:ramsey@cryptofi.tech).
+If you have any questions or need clarification about the challenge, feel free to reach out to us at [ramsey@investifi.co](mailto:ramsey@investifi.co).
 
 Good luck and we are excited to see what you come up with!
-
-**CryptoFi**
