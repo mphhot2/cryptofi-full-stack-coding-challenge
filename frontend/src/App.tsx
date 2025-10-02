@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { UserProvider } from "./context/UserContext";
+import { UserSwitcher } from "./components/UserSwitcher";
+import { CoinList } from "./components/CoinList";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="CryptoFi-logo.png" className="App-logo" alt="logo" />
-        <p>
-            Welcome to CryptoFi's Full-Stack Coding Challenge!
-        </p>
-        <p>
-            Please read the README.md file for instructions on how to complete this challenge.
-        </p>
-        <p>
-            Good luck!
-        </p>
-      </header>
-    </div>
+    <UserProvider>
+      <main className="page">
+        <div className="container">
+          <h1>Available Coins</h1>
+          <div className="headerRow">
+            <UserSwitcher />
+          </div>
+          <CoinList />
+        </div>
+      </main>
+    </UserProvider>
   );
 }
-
-export default App;
