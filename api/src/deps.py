@@ -102,7 +102,6 @@ def _table(name: str):
 
 
 def load_prices() -> Dict[str, Tuple[str, float]]:
-    """{SYM: (name, price)} from DynamoDB."""
     t = _table("prices")
     items: List[dict] = []
     resp = t.scan()
@@ -149,9 +148,6 @@ def list_balances_for_user(user_id: str) -> List[CoinOut]:
             value=amt * price,
         ))
 
-    # - balances with >0 amount first, sorted by amount DESC
-    # - if amounts tie, sort alphabetically by symbol
-    # - balances with 0 amount last, alphabetically
     coins.sort(
         key=lambda c: (
             0 if c.amount > 0 else 1,
