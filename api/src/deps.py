@@ -135,8 +135,8 @@ def load_user_balances(user_id: str) -> Dict[str, float]:
 
 
 def list_balances_for_user(user_id: str) -> List[CoinOut]:
-    prices = load_prices()              # {SYM: (name, price)}
-    amounts = load_user_balances(user_id)  # {SYM: amount}
+    prices = load_prices()              
+    amounts = load_user_balances(user_id) 
 
     coins: List[CoinOut] = []
     for sym, (name, price) in prices.items():

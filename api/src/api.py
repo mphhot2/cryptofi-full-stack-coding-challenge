@@ -4,7 +4,7 @@ from typing import List
 from .models import CoinOut
 from .deps import list_balances_for_user, ensure_tables_and_seed
 
-app = FastAPI(title="CryptoFi Full-Stack Coding Challenge")
+app = FastAPI(title="InvestiFi Full-Stack Engineering")
 
 # Allow CRA on :3000
 app.add_middleware(
