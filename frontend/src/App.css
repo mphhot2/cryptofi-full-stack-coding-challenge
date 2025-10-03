@@ -35,7 +35,7 @@
 .sampleMeta { min-width: 0; }
 .sampleName {
   font-weight: 800;
-  color: #0b3d2e;                          /* dark green */
+  color: #0b3d2e;
   font-size: 1.1rem;
   margin-bottom: 2px;
 }
@@ -49,7 +49,7 @@
 .sampleValue {
   color: #0b3d2e;
   font-weight: 800;
-  font-size: 1.25rem;                       /* bold green $ value */
+  font-size: 1.25rem;
 }
 .sampleAmount {
   color: #0b3d2e;
@@ -62,7 +62,7 @@
   justify-self: end;
   padding: 10px 22px;
   border-radius: 999px;
-  border: 2px solid #d6d3d1;               /* warm gray ring */
+  border: 2px solid #d6d3d1;
   background: #fff;
   font-weight: 700;
   color: #0b3d2e;
@@ -116,7 +116,7 @@
 h1 {
   font-size: 2rem;
   font-weight: 800;
-  color: #2c513f; /* deep green */
+  color: #2c513f;
   letter-spacing: -0.01em;
   margin: 0 0 16px;
 }
@@ -157,7 +157,7 @@ h1 {
 
 .sampleLogoWrap {
   width: 48px; height: 48px; border-radius: 12px;
-  background: #f1f5f9;                       /* light neutral */
+  background: #f1f5f9;
   display: grid; place-items: center;
 }
 .sampleLogo { width: 28px; height: 28px; display: block; }
@@ -165,7 +165,7 @@ h1 {
 .sampleMeta { min-width: 0; }
 .sampleName {
   font-weight: 800;
-  color: #0b3d2e;                            /* deep green for names */
+  color: #0b3d2e;
   font-size: 1.1rem;
   margin-bottom: 2px;
 }
@@ -180,7 +180,7 @@ h1 {
 .sampleValue {
   color: #0b3d2e;
   font-weight: 800;
-  font-size: 1.25rem;                        /* bold green value */
+  font-size: 1.25rem;
 }
 .sampleAmount {
   color: #0b3d2e;
@@ -194,7 +194,7 @@ h1 {
   justify-self: end;
   padding: 10px 22px;
   border-radius: 999px;
-  border: 2px solid #d6d3d1;                 /* warm gray ring */
+  border: 2px solid #d6d3d1;
   background: #ffffff;
   font-weight: 700;
   color: #0b3d2e;

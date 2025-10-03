@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchBalances, type Coin } from "../lib/api";
 import { useUser } from "../context/UserContext";
 
-// map to /public/assets/*.svg
+
 const logoFor = (symbol: string) => {
   switch (symbol.toUpperCase()) {
     case "BTC": return "/assets/btc.svg";
@@ -18,7 +18,7 @@ const usd = (n: number) =>
   n.toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 const amt = (n: number) =>
-  n.toLocaleString("en-US", { minimumFractionDigits: 8, maximumFractionDigits: 8 }); // like screenshot
+  n.toLocaleString("en-US", { minimumFractionDigits: 8, maximumFractionDigits: 8 });
 
 export const CoinList: React.FC = () => {
   const { userId } = useUser();

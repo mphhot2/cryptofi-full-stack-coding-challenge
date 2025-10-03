@@ -20,17 +20,13 @@ def startup_event():
     """Create/seed DynamoDB tables on boot (idempotent)."""
     ensure_tables_and_seed()
 
-@app.get("/")
-def hello_world():
-    return {"hello": "world"}
-
 @app.get("/users/{user_id}/balances", response_model=List[CoinOut])
 def get_user_balances(user_id: str):
     """
     Returns ordered prices+balances for the given user.
 
     Ordering requirement:
-      1) All coins the user HOLDS (> 0) ordered by amount DESC
-      2) Then all coins with ZERO balance ordered alphabetically by symbol
+      The balances should be ordered by the most amount of holdings a user has,
+      for all the coins that the user holds, then alphabetically.
     """
     return list_balances_for_user(user_id)

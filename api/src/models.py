@@ -11,7 +11,7 @@ class DynamoDbModelBase(Dyntastic):
 
     @property
     @abstractmethod
-    def __table_name__(self):  # over-ride this on each implementing class
+    def __table_name__(self):  # over-ride this
         pass
 
     hash_key: str = Field(default=None, title="DynamoDB Partition Key")
